@@ -23,5 +23,21 @@ class ViewController: UIViewController {
         sender.backgroundColor = sender.backgroundColor == .red ? .green : .red;
     }
     
-}
+    //MARK: UIViewController lifecycle methods
 
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear(_:)");
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear(_:)");
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("viewWillDisppear(_:)");
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisppear(_:)");
+    }
+}
