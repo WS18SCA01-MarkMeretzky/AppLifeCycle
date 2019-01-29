@@ -18,24 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?;
 
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let state: String = name[application.applicationState.rawValue];
-        print("application(_:willFinishLaunchingWithOptions:) \(state)");
-        launchOptions?.forEach {print($0, $1);}
-        
-        if let window: UIWindow = window {
-            if let rootViewController: UIViewController = window.rootViewController {
-                if let viewController: ViewController = rootViewController as? ViewController {
-                    if let stateLabel: UILabel = viewController.stateLabel {
-                        stateLabel.text = state;
-                    }
-                }
-            }
-        }
-       
-        return true;
-    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
